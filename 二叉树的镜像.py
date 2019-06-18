@@ -18,6 +18,16 @@ class Solution:
         '''
 
         :param root:
-        :return:
+        :return:镜像root
         '''
-        
+        if root == None:
+            return
+        if root.left == None and root.right == None:
+            return root
+
+        temproot = root.left
+        root.left = root.right
+        root.right = temproot
+
+        self.Mirror(root.left)
+        self.Mirror(root.right)
