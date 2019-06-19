@@ -26,21 +26,34 @@ class Solution:
             return None
         pNode = pHead
 
+        '''
+        第一步：复制所有链表节点并添加在后面，
+        A——B——C——D变成A——A'——B——B'——C——C'——D——D'
+        '''
         while pNode:
-            # 
+            # 复制一个节点
             pClone = RandomListNode(pNode.label)
+            # 将复制节点的next指向原节点的next
             pClone.next = pNode.next
+            # 将原节点的next指向复制节点
             pNode.next = pClone
+            # 接下来进行后续链表的操作
             pNode = pClone.next
-
+        '''
+        第二步：将所有的random指针复制
+        '''
         pNode = pHead
 
         while pNode:
+            # 针对例子，pClone为A'
             pClone = pNode.next
             if pNode.random != None:
+                # 假设A.random指向C，那么A'.random指向C'
                 pClone.random = pNode.random.next
             pNode = pClone.next
-
+        '''
+        第三步：拆分鏈表，将链表拆分成复制的和原始的
+        '''
         pNode = pHead
         pCloneHead = pCloneNode = pNode.next
         pNode.next = pCloneHead.next
@@ -52,6 +65,7 @@ class Solution:
             pNode.next = pCloneNode.next
             pNode = pNode.next
 
+        # 返回的必须是头节点，上面的操作是为了将链表拆分，得到复制链表
         return pCloneHead
 
 
