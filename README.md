@@ -2,3 +2,8 @@
 conding for offer
 ## 剑指offer练习
 2019-06-18
+练习至20题
+
+2019-06-19
+继续练习至25题，添加一篇CSDN博客
+[python函数记录](https://blog.csdn.net/r1ch4rd/article/details/92834702)
