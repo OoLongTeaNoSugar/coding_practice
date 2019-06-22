@@ -7,3 +7,9 @@ conding for offer
 2019-06-19
 继续练习至25题，添加一篇CSDN博客
 [python函数记录](https://blog.csdn.net/r1ch4rd/article/details/92834702)
+
+2019-06-22
+
+练习至30题，部分题目在牛客上提交，编辑添加了部分博客内容。
+
+JD提前批简历已被内推（技术管培生）
