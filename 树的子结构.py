@@ -26,10 +26,11 @@ class Solution:
             if pRoot1.val == pRoot2.val:
                 res = self.IfTree1hasTree2(pRoot1, pRoot2)
             if not res:
-                res = self.IfTree1hasTree2(pRoot1.left, pRoot2)
+                res = self.HasSubtree(pRoot1.left, pRoot2)
             if not res:
-                res = self.IfTree1hasTree2(pRoot1.right, pRoot2)
-            return res
+                res = self.HasSubtree(pRoot1.right, pRoot2)
+
+        return res
 
     def IfTree1hasTree2(self, pRoot1, pRoot2):
         '''
@@ -38,9 +39,13 @@ class Solution:
         :param pRoot2:
         :return: bool
         '''
-        if pRoot1 == None:
-            return False
+
+        # 修改错误，B树为空时，表示全部对比完毕，均为正确输出yes
         if pRoot2 == None:
+            return True
+
+        # B树不为空，但是A树为空代表子树不相同，输出false
+        if pRoot1 == None:
             return False
         if pRoot1.val != pRoot2.val:
             return False
