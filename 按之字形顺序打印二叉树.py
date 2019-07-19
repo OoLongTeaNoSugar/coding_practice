@@ -45,4 +45,4 @@ class Solution:
             nodes = nextStack
 
         return res
-    
+

@@ -27,3 +27,7 @@ conding for offer
 练习至53题 重要题：正则表达式，字符串是否为数字
 
 [机器学习算法整理](https://blog.csdn.net/r1ch4rd/article/details/94381741)
+
+2019-7-19
+
+剑指offer完成
