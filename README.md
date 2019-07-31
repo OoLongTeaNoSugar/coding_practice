@@ -31,3 +31,18 @@ conding for offer
 2019-7-19
 
 剑指offer完成
+
+7-31 流利说编程题复盘：
+- 题目：二叉树路径和为某一值，找出路径（剑指offer原题）
+- 层次遍历重建二叉树（实现其他几种遍历，并且重建）
+- 满足牛客的输出形式， 不带括号逗号
+```python
+from __future__ import print_function
+
+
+#python3.x
+print(x,end= " ")
+# python2.x 加逗号
+print(),
+print("\n"), # 换行，输出多行用
+```
