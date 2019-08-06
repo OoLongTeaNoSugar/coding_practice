@@ -37,5 +37,5 @@ class Solution:
                     index.pop(0)
                 index.append(i)
 
-            deque.append(num[index[0]]) # 加入最后一个窗口的最大值
+                deque.append(num[index[0]]) # 加入最后一个窗口的最大值
         return deque

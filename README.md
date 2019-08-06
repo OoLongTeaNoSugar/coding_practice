@@ -41,7 +41,7 @@ from __future__ import print_function
 
 
 #python3.x
-print(x,end= " ")
+print(end= " ")
 # python2.x 加逗号
 print(),
 print("\n"), # 换行，输出多行用
