@@ -1,3 +1,7 @@
+# -*- coding: utf-8 -*-
+"""
+内置heapSort
+"""
 import heapq
 def heapsort(iterable):
     h = []

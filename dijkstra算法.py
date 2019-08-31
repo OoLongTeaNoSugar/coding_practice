@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 import heapq
 import sys
-
+"""
+建立图结构
+"""
 
 class Graph:
     def __init__(self):

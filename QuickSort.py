@@ -1,5 +1,7 @@
 # =================================
 # quicksort small-->big O(NlogN)
+
+
 def swap(array, i, j):
     temp = array[i]
     array[i] = array[j]

@@ -1,5 +1,7 @@
 # -*- coding:utf-8 -*-
-
+"""
+得到最长子串
+"""
 def GetNextArray(string):
     next_arr = [0] * len(string)
     next_arr[0] = -1

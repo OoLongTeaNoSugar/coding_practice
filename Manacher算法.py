@@ -40,4 +40,5 @@ def Manacher(s):
 if __name__ == "__main__":
     s= ['a', 'b']
     d = set(s) # hash set
+
     print(d)

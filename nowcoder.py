@@ -1,6 +1,7 @@
 # -*- coding:utf-8 -*-
 """
 https://www.nowcoder.com/study/live/202/1/3
+
 """
 def NormalMode(s, cmmand):
     i = 0

@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-##############
+
 def isPrim(n):
     """
     :param n: 判读一个数是否为质数
