@@ -1,0 +1,121 @@
+def isfind(arr, n):
+    for i in range(len(arr) - 2):
+        le = i + 1
+        ri = len(arr) - 1
+        while le < ri:
+            sums = arr[i] + arr[le] + arr[ri]
+            if sums < n:
+                le += 1
+            elif sums > n:
+                ri -= 1
+            else:
+                return 'Ture'
+    return 'False'
+
+
+def minDebuff(matrix, n):
+    dp = [[0] * n for _ in range(n)]
+    dp[0][0] = matrix[0][0]
+    for col in range(1, n):
+        dp[0][col] = dp[0][col-1] + matrix[0][col]
+    for row in range(1, n):
+        dp[row][0] = dp[row-1][0] + matrix[row][0]
+    for col in range(1, n):
+        for row in range(1, n):
+            dp[row][col] = min(dp[row-1][col], dp[row][col-1]) + matrix[row][col]
+    return dp[n-1][n-1]
+
+
+def sums(p, k, li, ri, lj, rj):
+    count = 0
+    for pi in range(li, ri):
+        for pj in range(lj, rj):
+            count += p[pi][pj] * k[pi-li][pj-lj]
+    return math.floor(count)
+
+def CV(p, h, w, k, m):
+    res = [[0]*(h - m + 1) for _ in range(w - m + 1)]
+    for i in range(h-m+1):
+        for j in range(h-m+1):
+            res[i][j] = sums(p, k, i, i+m, j, j+m)
+    return res
+
+
+def fanzhuan(str_arr):
+    s_res = []
+    for s in str_arr:
+        if len(s) % 2 == 1:
+            s = s[::-1]
+        s_res.append(s)
+    return s_res
+
+def Count(int_str):
+    # leetcode decode ways 用dp
+    count = 0
+    if len(int_str) == 1 and int(int_str[0]) != 0:
+        return 1
+    if len(int_str) == 2 and int(int_str[0]) != 0:
+        if int(int_str) < 27:
+            return 1
+    if int(int_str[0]) != 0:
+        count += Count(int_str[1:])
+        if int(int_str[:2]) < 27:
+            count += Count(int_str[2:])
+    # count = count + Count(int_str[1:]) + Count(int_str[2:])
+    return count
+
+if __name__ == "__main__":
+    import sys
+    # int_str = sys.stdin.readline().strip()
+    # res = Count(int_str)
+    # print(res)
+    # arr  = sys.stdin.readline().strip().split(' ')
+    # res = fanzhuan(arr)
+    # print(' '.join(res))
+    a = [1, 2, 0]
+    print(a.index(min(a)))
+
+
+
+    # import math
+    # import sys
+    # h, w = map(int, sys.stdin.readline().strip().split(' '))
+    # p = []
+    # for i in range(h):
+    #     line = map(int, sys.stdin.readline().strip().split(' '))
+    #     line = list(line)
+    #     p.append(line)
+    # m = int(sys.stdin.readline())
+    # k = []
+    # for i in range(m):
+    #     line = map(float, sys.stdin.readline().strip().split(' '))
+    #     line = list(line)
+    #     k.append(line)
+    # result = CV(p,h,w,k,m)
+    # for i in range(len(result)):
+    #     for j in range(len(result[i])):
+    #         print(result[i][j], end=" ")
+    #     print("\n")
+
+    # line = sys.stdin.readline().strip().split(',')
+    # arr = map(int, line[0].strip().split(' '))
+    # n = int(line[1])
+    # arr = sorted(arr)
+    # print(isfind(arr, n))
+
+    # read matrix
+    # n = int(sys.stdin.readline())
+    # build = []
+    # i = 0
+    # while i < n:
+    #     line = map(int, sys.stdin.readline().strip().split(','))
+    #     line = list(line)
+    #     build.append(line)
+    #     i += 1
+    #
+    # print(minDebuff(build, n))
+    # while 1:
+    #     i = input()
+    #     if i == "END":
+    #         break
+    #     exec("print(" + i + ")")
