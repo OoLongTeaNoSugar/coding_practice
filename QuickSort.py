@@ -24,6 +24,7 @@ def partition(arr, L, R):
     return [less+1, more]
 
 def QuickSort(arr, L, R):
+    swapops = 0
     if L < R:
         swap(arr, L + random.randint(0, R-L), R)
         p = partition(arr, L, R)
@@ -50,12 +51,13 @@ def compare(arr1, arr2):
 
 if __name__ == "__main__":
     import random
-    for i in range(100):
-
-        test = random_int_list(1, 100, 10)
-        comp = sorted(test)
-        quicksort(test)
-        if compare(test, comp):
-            print('nice!')
+    # for i in range(100):
+    #
+    #     test = random_int_list(1, 100, 10)
+    #     comp = sorted(test)
+    #     quicksort(test)
+    #     if compare(test, comp):
+    #         print('nice!')
+    arr = [1, 5, 2, 4, 3]
 
 
