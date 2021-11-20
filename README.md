@@ -1,4 +1,8 @@
-# coding_practice
+- [Coding Practice](#coding-practice)
+  - [剑指offer练习](#剑指offer练习)
+  - [算法学习笔记](#算法学习笔记)
+
+# Coding Practice
 conding for offer
 ## 剑指offer练习
 2019-06-18
@@ -48,3 +52,13 @@ print("\n"), # 换行，输出多行用
 ```
 
 添加几种常见排序算法和题解
+
+
+-------------------------------
+## 算法学习笔记
+> 2021-11-19 开始重新刷题，并记录一些典型例子
+
+1. [回溯算法](回溯算法整理.md)
+
+
+
