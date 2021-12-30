@@ -1,7 +1,7 @@
 <!--
  * @Author: 张磊
  * @Date: 2021-11-19 17:56:11
- * @LastEditTime: 2021-12-17 14:40:15
+ * @LastEditTime: 2021-12-30 15:36:11
  * @LastEditors: Zhanglei
  * @Description: readme文件
  * @FilePath: \coding_practice\README.md
@@ -77,5 +77,7 @@ print("\n"), # 换行，输出多行用
 8. [双指针使用技巧](双指针使用技巧.md)
 9. [岛屿问题集合](岛屿问题集合.md)
 10. [面试注意点](面试注意点.md)
+11. [操作系统](操作系统.md)
+12. [快速排序](快速排序整理.md)
 
 
