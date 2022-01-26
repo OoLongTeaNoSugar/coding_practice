@@ -1,7 +1,7 @@
 <!--
  * @Author: 张磊
  * @Date: 2021-11-19 17:56:11
- * @LastEditTime: 2022-01-18 22:10:51
+ * @LastEditTime: 2022-01-26 18:28:35
  * @LastEditors: Zhanglei
  * @Description: readme文件
  * @FilePath: \coding_practice\README.md
@@ -80,5 +80,7 @@ print("\n"), # 换行，输出多行用
 11. [操作系统](操作系统.md)
 12. [快速排序](快速排序整理.md)
 13. [C++八股文](C++基础语法.md)
+14. [二叉树整理](二叉树整理.md)
+15. [GDB调试]
 
 
