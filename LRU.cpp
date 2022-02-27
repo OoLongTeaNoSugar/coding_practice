@@ -2,12 +2,14 @@
  * @Author: Zhanglei
  * @Date: 2022-02-01 16:39:06
  * @LastEditors: Zhanglei
- * @LastEditTime: 2022-02-11 14:36:23
+ * @LastEditTime: 2022-02-22 22:35:26
  * @Description: file content
  */
 
 #include<stdio.h>
 #include<unordered_map>
+
+using namespace std;
 //定义一个双向节点结构
 struct DLinkedNode {
     //存值k，v，操作时需要用
@@ -23,17 +25,18 @@ struct DLinkedNode {
 class LRUCache {
 private:
     /*hash表+双向链表组成
-    哈希表做映射，双项链表做增删改查*/
-    std::unordered_map<int, DLinkedNode*> cache;
+    哈希表做映射，双向链表做增删改查*/
+    unordered_map<int, DLinkedNode*> cache;
     //DLNode(k1,v1)<-->DLNode(k2,v2)......
     DLinkedNode* head;
     DLinkedNode* tail;
+    //LRUCache的大小
     int size;
     //最大容量
     int capacity;
 
 public:
-    //初始化
+    //初始化，构造函数
     LRUCache(int _capacity): capacity(_capacity), size(0) {
         // 使用伪头部和伪尾部节点
         head = new DLinkedNode();
